@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+            .header {
+                  height: 50px;
+                  background: linear-gradient(to bottom, #66b3ff, #003366);
+                  color: white;
+                  text-align: center;
+                  font-size: 24px;
+                  line-height: 50px;
+            }
+
+            .container {
+                  display: flex;
+                  margin-top: 20px;
+                  text-align: left;
+            }
+
+            .menu {
+                  width: 200px;
+                  padding: 10px;
+            }
+
+            .menu-btn {
+                  width: 100%;
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  background-color: #d9e9ff;
+                  border: 1px solid #bbb;
+                  border-radius: 5px;
+                  text-align: left;
+                  cursor: pointer;
+                  font-size: 16px;
+            }
+
+            .menu-btn:hover {
+                  background-color: #c7daf0;
+            }
+
+            .main-content {
+                  flex-grow: 1;
+                  padding: 20px;
+                  background-color: #e9e9e9;
+                  border-radius: 5px;
+                  margin-left: 10px;
+            }
+
+            .content {
+                  display: none;
+            }
+
+            .content.active {
+                  display: block;
+            }
+    </style>
+    <script>
+            function showContent(id) {
+                  // Скрыть все секции контента
+                  const contents = document.querySelectorAll('.content');
+                  contents.forEach(content => {
+                        content.classList.remove('active');
+                        content.style.display = "none";
+            });
+
+                  // Показать выбранную секцию контента
+                  const selectedContent = document.getElementById(id);
+                  selectedContent.classList.add('active');
+                  selectedContent.style.display = "block";
+            }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">Информация</div>
+    </header>
+    <div class="container">
+        <div class="menu">
+            <button class="menu-btn" onclick="showContent('terminal')">О терминале</button>
+            <button class="menu-btn" onclick="showContent('clients')">Для клиентов</button>
+            <button class="menu-btn" onclick="showContent('agreement')">Договор-оферта</button>
+            <button class="menu-btn" onclick="showContent('operator')">Об операторе системы</button>
+            <button class="menu-btn" onclick="showContent('bank')">О расчётном банке</button>
+            <button class="menu-btn" onclick="showContent('authors')">Авторы</button>
+            <button class="menu-btn" onclick="showContent('ads')">О рекламе</button>
+        </div>
+        <div class="main-content">
+            <div id="terminal" class="content">
+                  <h1>FakeOSMP v1.0</h1>
+                  <p>Разрабатывалось на Python 3.10 и Django рыбкой.</p>
+                  <h1>FakeOSMP Launcher</h1>
+                  <p>Лаунчер разрабатывался на Python 3.10 с использованием customtkinter</p>
+                  <a href="https://t.me/fakeosmp"><img class="logo" src="{% static 'img/telegram.png' %}" alt="Telegram"></a>
+            </div>
+            <div id="clients" class="content" style="display:none;">
+                  <h1>Использование FakeOSMP</h1>
+                  <p>FakeOSMP может использоваться только в образовательных и ознакомительных целях. Не стоит устанавливать данное ПО на терминалы, предназначенные для установления в людных местах.</p>
+            </div>
+            <div id="agreement" class="content" style="display:none;">А её нет...</div>
+            <div id="operator" class="content" style="display:none;">потом будет. честно.</div>
+            <div id="bank" class="content" style="display:none;">
+                  <h1>Киви закрылся еще в 2023 году :<</h1>
+            </div>
+            <div id="authors" class="content" style="display:none;">
+                  <h1>Авторы</h1>
+                  <h2>Кодеры</h2>
+                  <p>Frontend+Backend - <a href="https://t.me/timursper">рыбочка</a></p>
+                  <p>FakeOSMP Launcher v1.0 - <a href="https://t.me/timursper">рыбочка</a></p>
+                  <h2>Благодарность</h2>
+                  <p>Выражаю огромную благодарность <a href="https://t.me/W1_zard1">✈️ (╥﹏╥) W1zard (╥﹏╥) ✈️</a> за аватарку и чату <b>Семья Qiwi-терминалов</b> за продвижение</p>
+            </div>
+            <div id="ads" class="content" style="display:none;">
+                  <h1>Реклама</h1>
+                  <h2>Прайс-лист</h2>
+                  <p>Баннер на главной странице - 200 рублей/неделя</p>
+                  <p>Баннер на странице категорий - 180 рублей/неделя</p>
+                  <p>Баннер в одной из категорий - 150 рублей/неделя</p>
+                  <p>Пост в Telegram-канале - 300 рублей/единоразово</p>
+            </div>
+        </div>
+    </div><br>
+    <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+</body>
+</html>

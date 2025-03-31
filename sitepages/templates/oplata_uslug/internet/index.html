@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Выберите оператора</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+      <div class="opheader">
+            <img src="{% static 'img/logo.jpg' %}" alt="Qiwi">
+            <h1>Выберите оператора</h1>
+      </div>
+      <div class="catheader">
+            <div class="catheader-icon">
+                  <img src="{% static 'img/category/internet.png' %}" alt="icon">
+            </div>
+            <div class="catheader-text">
+                  <span class="main-text">ИНТЕРНЕТ И ТЕЛЕФОНИЯ</span>
+                  <span class="page-text">1-я страница из 1</span>
+            </div>
+      </div><br><br>
+      <div class="categories">
+            <a href="/oplata_uslug/rostelekom"><div class="category">
+                  <img src="{% static 'img/operators/rostelekom.png' %}" alt="Ростелеком">
+                  <h3>Ростелеком</h3>
+            </div></a>
+            <a href="/oplata_uslug/mts_dom"><div class="category">
+                  <img src="{% static 'img/operators/mts.png' %}" alt="МТС">
+                  <h3>МТС. ДОМ<br>ИНТЕРНЕТ</h3>
+            </div></a>
+            <a href="/oplata_uslug/beeline_dom"><div class="category">
+                  <img src="{% static 'img/operators/beeline.png' %}" alt="BEELINE">
+                  <h3>БИЛАЙН. ДОМ<br>ИНТЕРНЕТ</h3>
+            </div></a>
+            <a href="/oplata_uslug/megafon_dom"><div class="category">
+                  <img src="{% static 'img/operators/megafon.png' %}" alt="MEGAFON">
+                  <h3>МЕГАФОН. ДОМ<br>ИНТЕРНЕТ</h3>
+            </div></a>
+            <a href="/oplata_uslug/beeline_wifi"><div class="category">
+                  <img src="{% static 'img/operators/beeline_wifi.png' %}" alt="BEELINE_WIFI">
+                  <h3>БИЛАЙН WIFI</h3>
+            </div></a>
+            <a href="/oplata_uslug/domru"><div class="category">
+                  <img src="{% static 'img/operators/domru.png' %}" alt="DOM_RU">
+                  <h3>ДОМ.RU</h3>
+            </div></a>
+      </div>
+      <br><br>
+      <div class="buttons">
+            <a href="/oplata_uslug"><img src="{% static 'img/buttons/back.gif' %}"></a>
+            <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+      </div>
+</body>
+</html>

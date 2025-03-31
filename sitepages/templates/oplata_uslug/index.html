@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Выберите оператора</title>
+      <script src="{% static 'jquery-3.7.1.min.js' %}"></script>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+      <style>
+            #fullscreenContainer {
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0,0,0,0.8);
+                  color: white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                  z-index: 1000;
+            }
+      </style>
+</head>
+<body>
+      <div id="fullscreenContainer">
+            Нажмите для продолжения
+      </div>
+
+      <div class="opheader">
+            <img src="{% static 'img/logo.jpg' %}" alt="Qiwi">
+            <h1>Выберите оператора</h1>
+      </div>
+      <div class="headline">
+            крупнейшие провайдеры региона
+      </div>
+      <div class="popular">
+            <div class="item">
+                  <a href="/oplata_uslug/rosselhoz">
+                        <img src="{% static 'img/operators/rosselhoz.png' %}" alt="Operator">
+                  </a>
+            </div>
+            <div class="item">
+                  <a href="/oplata_uslug/mts">
+                        <img src="{% static 'img/operators/mts.png' %}" alt="Operator">
+                  </a>
+            </div>
+            <div class="item">
+                  <a href="/oplata_uslug/beeline">
+                        <img src="{% static 'img/operators/beeline.png' %}" alt="Operator">
+                  </a>
+            </div>
+            <div class="item">
+                  <a href="/oplata_uslug/rostelekom">
+                        <img src="{% static 'img/operators/rostelekom.png' %}" alt="Operator">
+                  </a>
+            </div>
+            <div class="item">
+                  <a href="/oplata_uslug/megafon">
+                        <img src="{% static 'img/operators/megafon.png' %}" alt="Operator">
+                  </a>
+            </div>
+            <div class="item">
+                  <a href="/oplata_uslug/tele2">
+                        <img src="{% static 'img/operators/tele2.png' %}" alt="Operator">
+                  </a>
+            </div>
+      </div>
+      <br><br>
+      <div class="categories">
+            <a href="/oplata_uslug/category/mobile"><div class="category">
+                  <img src="{% static 'img/category/mobile.gif' %}" alt="Mobile">
+                  <h3>СОТОВАЯ<br>СВЯЗЬ</h3>
+           </div></a>
+           <a href="/oplata_uslug/category/internet"><div class="category">
+                  <img src="{% static 'img/category/internet.png' %}" alt="Internet">
+                  <h3>ИНТЕРНЕТ И<br>ТЕЛЕФОНИЯ</h3>
+            </div></a>
+            <a href="/oplata_uslug/category/tv"><div class="category">
+                  <img src="{% static 'img/category/tv.png' %}" alt="TV">
+                  <h3>ТЕЛЕВИДЕНИЕ</h3>
+            </div></a>
+            <a href="/oplata_uslug/category/bank"><div class="category">
+                  <img src="{% static 'img/category/bank.gif' %}" alt="BANK">
+                  <h3>БАНКОВСКИЕ<br>УСЛУГИ</h3>
+            </div></a>
+            <!--<a href="/oplata_uslug/category/bank/per"><div class="category">
+                  <img src="{% static 'img/category/dper.gif' %}" alt="DENPER">
+                  <h3>ДЕНЕЖНЫЕ<br>ПЕРЕВОДЫ</h3>
+            </div></a>-->
+            <a href="/oplata_uslug/category/games"><div class="category">
+                  <img src="{% static 'img/category/games.png' %}" alt="other">
+                  <h3>ИГРЫ</h3>
+            </div></a>
+      </div>
+      <br><br>
+      <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+
+      <script>
+      $(document).ready(function(e){
+            let audio = new Audio();
+            audio.preload = 'auto';
+            audio.src = '{% static "audio/select_operator.wav" %}';
+
+            $('#fullscreenContainer').on('click', function() {
+                  audio.play().catch(function(error) {
+                        console.log('Error playing the audio:', error);
+                  });
+                  $(this).hide();
+            });
+      });
+      </script>
+</body>
+</html>

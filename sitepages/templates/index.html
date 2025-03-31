@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>QIWI-Терминал</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+      <center><header>
+            <img src="{% static 'img/logo.jpg' %}" alt="QIWI" class="header-img">
+        </header></center>
+      <p>Слишком крупно? Уменьшите масштаб на горячую клавишу <b>CTRL + -</b></p>
+      <br><br><br>
+      <div class="payments">
+            <a href="/oplata_uslug"><img src="{% static 'img/oplata_uslug.jpg' %}"></a><br>
+            <a href="#" onclick="alert('В разработке...')"><img src="{% static 'img/qiwi.gif' %}"></a><br>
+            <a href="/oplata_uslug/mastercard"><img src="{% static 'img/skype.gif' %}"></a>
+      </div><br><br>
+      <div class="left">
+            <a href="/about"><img src="{% static 'img/inf.gif' %}" alt="About"></a>
+      </div>
+      <p>FakeOSMP v1.0. <a href="https://t.me/fakeosmp">Telegram-канал</a></p>
+      <p>Все изображения взяты из оригинального образа OSMP для Qiwi-терминалов</p>
+</body>
+</html>

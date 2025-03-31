@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Выберите оператора</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+      <div class="opheader">
+            <img src="{% static 'img/logo.jpg' %}" alt="Qiwi">
+            <h1>Выберите оператора</h1>
+      </div>
+      <div class="catheader">
+            <div class="catheader-icon">
+                  <img src="{% static 'img/category/mobile.gif' %}" alt="icon">
+            </div>
+            <div class="catheader-text">
+                  <span class="main-text">СОТОВАЯ СВЯЗЬ</span>
+                  <span class="page-text">1-я страница из 1</span>
+            </div>
+      </div><br><br>
+      <div class="categories">
+            <a href="/oplata_uslug/mts"><div class="category">
+                  <img src="{% static 'img/operators/mts.png' %}" alt="МТС">
+                  <h3>МТС<br>РОССИЯ</h3>
+            </div></a>
+            <a href="/oplata_uslug/beeline"><div class="category">
+                  <img src="{% static 'img/operators/beeline.png' %}" alt="BEELINE">
+                  <h3>БИЛАЙН<br>РОССИЯ</h3>
+            </div></a>
+            <a href="/oplata_uslug/beeline"><div class="category">
+                  <img src="{% static 'img/operators/beeline.png' %}" alt="BEELINE">
+                  <h3>БИЛАЙН<br>КАЗАХСТАН</h3>
+            </div></a>
+            <a href="/oplata_uslug/beeline"><div class="category">
+                  <img src="{% static 'img/operators/beeline.png' %}" alt="BEELINE">
+                  <h3>БИЛАЙН<br>УЗБЕКИСТАН</h3>
+            </div></a>
+            <a href="/oplata_uslug/tele2"><div class="category">
+                  <img src="{% static 'img/operators/tele2.png' %}" alt="TELE-2">
+                  <h3>TELE-2<br>РОССИЯ</h3>
+            </div></a>
+            <a href="/oplata_uslug/megafon"><div class="category">
+                  <img src="{% static 'img/operators/megafon.png' %}" alt="MEGAFON">
+                  <h3>МЕГАФОН.<br>РОССИЯ</h3>
+            </div></a>
+      </div>
+      <br><br>
+      <div class="buttons">
+            <a href="/oplata_uslug"><img src="{% static 'img/buttons/back.gif' %}"></a>
+            <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+      </div>
+</body>
+</html>

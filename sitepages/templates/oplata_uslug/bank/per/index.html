@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Выберите оператора</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+      <div class="opheader">
+            <img src="{% static 'img/logo.jpg' %}" alt="Qiwi">
+            <h1>Выберите оператора</h1>
+      </div>
+      <div class="catheader">
+            <div class="catheader-icon">
+                  <img src="{% static 'img/category/bank.gif' %}" alt="icon">
+            </div>
+            <div class="catheader-text">
+                  <span class="main-text">ДЕНЕЖНЫЕ ПЕРЕВОДЫ</span>
+                  <span class="page-text">1-я страница из 1</span>
+            </div>
+      </div><br><br>
+      <div class="categories">
+            <a href="/oplata_uslug/per/mastercard"><div class="category">
+                  <img src="{% static 'img/operators/mastercard.png' %}" alt="MASTERCARD">
+                  <h3>ПЕРЕВОД НА<br>MASTERCARD</h3>
+            </div></a>
+            <a href="/oplata_uslug/per/visa"><div class="category">
+                  <img src="{% static 'img/operators/visa.gif' %}" alt="VISA" style="height: 50px;">
+                  <h3>ПЕРЕВОД НА<br>VISA</h3>
+            </div></a>
+            <a href="/oplata_uslug/per/rosselhoz"><div class="category">
+                  <img src="{% static 'img/operators/rosselhoz.png' %}" alt="ROSSELHOZ">
+                  <h3>ПЕРЕВОД НА<br>РОССЕЛЬХОЗБАНК</h3>
+            </div></a>
+            <a href="/oplata_uslug/per/beeline_bank"><div class="category">
+                  <img src="{% static 'img/operators/beelinebank.png' %}" alt="BEELINEBANK">
+                  <h3>ПЕРЕВОД НА<br>БИЛАЙН-БАНК</h3>
+            </div></a>
+            <a href="/oplata_uslug/per/mir"><div class="category">
+                  <img src="{% static 'img/operators/mir.png' %}" alt="MIR" style="height: 30px;">
+                  <h3>ПЕРЕВОД НА<br>МИР</h3>
+            </div></a>
+            <a href="/oplata_uslug/per/zarubezh"><div class="category">
+                  <img src="{% static 'img/operators/zolkor.png' %}" alt="ZARUBEZH" style="height: 40px;">
+                  <h3>ПЕРЕВОД НА<br>ЗАРУБЕЖН. КАРТЫ<br></h3>
+            </div></a>
+            <a href="/oplata_uslug/per/qiwi"><div class="category">
+                  <img src="{% static 'img/logo.png' %}" alt="QIWI" style="width: 60px;">
+                  <h3>ПЕРЕВОД НА<br>QIWI-КОШЕЛЕК<br></h3>
+            </div></a>
+            <a href="/oplata_uslug/per/qiwi"><div class="category">
+                  <img src="{% static 'img/operators/ymoney.png' %}" alt="YMONEY">
+                  <h3>ПЕРЕВОД НА<br>Я.ДЕНЬГИ<br></h3>
+            </div></a>
+      </div>
+      <br><br>
+      <div class="buttons">
+            <a href="/oplata_uslug"><img src="{% static 'img/buttons/back.gif' %}"></a>
+            <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+      </div>
+</body>
+</html>

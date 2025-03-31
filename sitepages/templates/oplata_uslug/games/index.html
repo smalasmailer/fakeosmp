@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Выберите оператора</title>
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+      <div class="opheader">
+            <img src="{% static 'img/logo.jpg' %}" alt="Qiwi">
+            <h1>Выберите оператора</h1>
+      </div>
+      <div class="catheader">
+            <div class="catheader-icon">
+                  <img src="{% static 'img/category/games.png' %}" alt="icon">
+            </div>
+            <div class="catheader-text">
+                  <span class="main-text">ИГРЫ</span>
+                  <span class="page-text">1-я страница из 1</span>
+            </div>
+      </div><br><br>
+      <div class="categories">
+            <a href="/oplata_uslug/steam/?currency=rubles"><div class="category">
+                  <img src="{% static 'img/operators/steam.png' %}" alt="STEAM">
+                  <h3>STEAM<br>РУБЛИ</h3>
+            </div></a>
+            <a href="/oplata_uslug/steam/?currency=tenge"><div class="category">
+                  <img src="{% static 'img/operators/steam.png' %}" alt="STEAM">
+                  <h3>STEAM<br>ТЕНГЕ</h3>
+            </div></a>
+            <a href="/oplata_uslug/wowgold"><div class="category">
+                  <img src="{% static 'img/operators/wowgold.png' %}" alt="WOWGOLD">
+                  <h3>WOW<br>GOLD</h3>
+            </div></a>
+            <a href="/oplata_uslug/robux"><div class="category">
+                  <img src="{% static 'img/operators/robux.png' %}" alt="ROBUX">
+                  <h3>ROBUX</h3>
+            </div></a>
+      </div>
+      <br><br>
+      <div class="buttons">
+            <a href="/oplata_uslug"><img src="{% static 'img/buttons/back.gif' %}"></a>
+            <a href="/"><img src="{% static 'img/buttons/tomain.png' %}"></a>
+      </div>
+</body>
+</html>
